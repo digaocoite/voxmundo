@@ -1,4 +1,3 @@
-import React from 'react';
 import { ASSETS } from '../constants';
 
 const ProfessoresPage = () => {
