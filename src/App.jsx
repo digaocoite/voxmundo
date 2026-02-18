@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import Navbar from './components/layout/Navbar';
 import Footer from './components/layout/Footer';
 import WhatsAppBtn from './components/ui/WhatsAppBtn';
@@ -38,6 +39,7 @@ const App = () => {
 
             <Footer setCurrentPage={setCurrentPage} />
             <WhatsAppBtn />
+            <SpeedInsights />
         </div>
     );
 };
