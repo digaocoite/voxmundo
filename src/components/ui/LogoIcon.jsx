@@ -1,4 +1,4 @@
-import React from 'react';
+import PropTypes from 'prop-types';
 
 const LogoIcon = ({ className = "w-10 h-10" }) => (
     <svg viewBox="0 0 100 100" className={className} fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,5 +18,9 @@ const LogoIcon = ({ className = "w-10 h-10" }) => (
         <path d="M50 22C34.5 22 22 34.5 22 50C22 65.5 34.5 78 50 78C65.5 78 65.5 78 50 78C34.5 78 22 65.5 50 22ZM50 74C44.5 74 40 71.5 40 50C40 28.5 44.5 26 50 26C55.5 26 60 28.5 60 50C60 71.5 55.5 74 50 74ZM26 50C26 48.5 30 46 50 46C70 46 74 48.5 74 50C74 51.5 70 54 50 54C30 54 26 51.5 26 50Z" fill="url(#logoGradient)" />
     </svg>
 );
+
+LogoIcon.propTypes = {
+    className: PropTypes.string,
+};
 
 export default LogoIcon;

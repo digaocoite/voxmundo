@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import PropTypes from 'prop-types';
 import { ASSETS } from '../../constants';
 import LogoIcon from '../ui/LogoIcon';
 
@@ -90,6 +91,11 @@ const Navbar = ({ currentPage, setCurrentPage }) => {
             )}
         </nav>
     );
+};
+
+Navbar.propTypes = {
+    currentPage: PropTypes.string.isRequired,
+    setCurrentPage: PropTypes.func.isRequired,
 };
 
 export default Navbar;

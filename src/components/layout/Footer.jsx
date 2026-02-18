@@ -1,5 +1,5 @@
-import React from 'react';
 import { Instagram, Linkedin, Facebook, Mail, Phone, Clock } from 'lucide-react';
+import PropTypes from 'prop-types';
 import { ASSETS } from '../../constants';
 import LogoIcon from '../ui/LogoIcon';
 
@@ -77,5 +77,9 @@ const Footer = ({ setCurrentPage }) => (
         </div>
     </footer>
 );
+
+Footer.propTypes = {
+    setCurrentPage: PropTypes.func.isRequired,
+};
 
 export default Footer;

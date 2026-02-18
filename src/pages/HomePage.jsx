@@ -1,5 +1,5 @@
-import React from 'react';
 import { ArrowRight, Zap, ChevronRight, Users, Star, Award, MessageCircle, CheckCircle, Globe } from 'lucide-react';
+import PropTypes from 'prop-types';
 import { ASSETS } from '../constants';
 
 const HomePage = ({ setCurrentPage }) => {
@@ -174,7 +174,7 @@ const HomePage = ({ setCurrentPage }) => {
                                 <div className="flex text-orange-500 mb-4">
                                     {[1, 2, 3, 4, 5].map(s => <Star key={s} size={16} fill="currentColor" />)}
                                 </div>
-                                <p className="text-slate-700 italic mb-8 leading-relaxed">"{dep.text}"</p>
+                                <p className="text-slate-700 italic mb-8 leading-relaxed">&quot;{dep.text}&quot;</p>
                                 <div className="flex items-center">
                                     <div className="w-12 h-12 bg-slate-200 rounded-full mr-4 overflow-hidden">
                                         <img src={`${ASSETS.avatarBase}${dep.name}`} alt={dep.name} />
@@ -212,6 +212,10 @@ const HomePage = ({ setCurrentPage }) => {
             </section>
         </div>
     );
+};
+
+HomePage.propTypes = {
+    setCurrentPage: PropTypes.func.isRequired,
 };
 
 export default HomePage;

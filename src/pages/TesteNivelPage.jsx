@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { CheckCircle, ChevronRight } from 'lucide-react';
 
 const TesteNivelPage = () => {
     const [step, setStep] = useState(0);
-    const [answers, setAnswers] = useState({});
 
     const questions = [
         { q: "Qual o seu objetivo principal ao aprender um novo idioma?", options: ["Viagens", "Trabalho", "Fluência Acadêmica", "Hobby"] },
